@@ -37,22 +37,18 @@ config.module.postLoaders = [{
 }];
 
 config.devServer = {
-	contentBase: PATHS.build,
-
-	host: process.env.HOST,
-	port: process.env.PORT
-
-	historyApiFallback: true,
-
+	publicPath: config.output.publicPath,
 	hot: true,
-	inline: true,
-	progress: true,
-	stats: 'errors-only',
-
+	inline: false,
+	lazy: false,
 	quiet: true,
 	noInfo: true,
-
-	lazy: false,
+	headers: {
+		"Access-Control-Allow-Origin": "*"
+	},
+	stats: {
+		colors: true
+	},
 	host: hostname
 };
 

@@ -5,5 +5,3 @@ ReactDOM.render(
   <h1>Hello, world!</h1>,
   document.getElementById("view")
 );
-
-module.exports = "banana";
